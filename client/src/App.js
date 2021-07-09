@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  
+
   state = {
     response: '',
     post: '',
@@ -23,7 +23,9 @@ class App extends Component {
   };
 
   handleSubmit = async e => {
+
     e.preventDefault();
+
     const response = await fetch('/api/world', {
       method: 'POST',
       headers: {
@@ -31,8 +33,14 @@ class App extends Component {
       },
       body: JSON.stringify({ post: this.state.post }),
     });
-    const body = await response.text();    this.setState({ responseToPost: body });
-  };render() {
+
+    const body = await response.text();
+    this.setState({ responseToPost: body });
+
+  };
+
+  render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -65,4 +73,6 @@ class App extends Component {
       </div>
     );
   }
-}export default App;
+}
+
+export default App;
