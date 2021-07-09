@@ -1,5 +1,5 @@
 # cra-express
-Exmaple of create react application with express js server
+Example of create react application with express js server
 
 To run app,
 
