@@ -10,7 +10,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "pm2": "^5.1.0"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
