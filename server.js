@@ -36,7 +36,7 @@ function validateSecret(req, res, next){
   }
 
   let sig = 'sha1=' + crypto
-            .createHmac('sha1', process.env.WEBHOOK_SECRET)
+            .createHmac('sha1', "e9W80Mq1O7Gs")
             .update(payload)
             .digest('hex');
   if (req.headers['x-hub-signature'] == sig) {
