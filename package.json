@@ -1,11 +1,16 @@
 {
   "name": "example-create-react-app-express",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "client": "cd client && yarn && yarn start",
+    "client-prod": "cd client && yarn && yarn build",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "produce": "yarn && yarn dev"
+    "prod": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client-prod\"",
+    "run-dev": "yarn && yarn dev",
+    "run-prod": "yarn && yarn prod",
+    "clean-project": "rm -rf node_modules && rm -rf client/node_modules"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
