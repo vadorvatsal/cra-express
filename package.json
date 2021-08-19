@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "client": "cd client && yarn && yarn start",
-    "client-prod": "cd client && yarn && yarn build",
+    "client-prod": "cd client && yarn && yarn build && serve -s build",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "prod": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client-prod\"",
